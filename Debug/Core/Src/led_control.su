@@ -1,0 +1,14 @@
+led_control.c:3:6:red	16	static
+led_control.c:20:6:yellow	16	static
+led_control.c:37:6:green	16	static
+led_control.c:54:6:toggleRed	16	static
+led_control.c:71:6:toggleGreen	16	static
+led_control.c:88:6:toggleYellow	16	static
+led_control.c:106:6:led1Update	16	static
+led_control.c:209:6:led2Update	16	static
+led_control.c:312:6:switchLed	16	static
+led_control.c:325:6:clearAllLights	16	static
+led_control.c:329:6:countDownTime	8	static
+led_control.c:337:6:blinkRed	8	static
+led_control.c:345:6:blinkGreen	8	static
+led_control.c:353:6:blinkYellow	8	static
