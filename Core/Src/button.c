@@ -11,18 +11,16 @@ static GPIO_PinState keyReg1[NO_OF_BUTTONS];
 static GPIO_PinState keyReg2[NO_OF_BUTTONS];
 static GPIO_PinState keyReg0[NO_OF_BUTTONS];
 
-static int flagForButtonPressed[NO_OF_BUTTONS] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
-static int flagForButtonPressed1s[NO_OF_BUTTONS]= {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
-static int counterForButtonPressed1s[NO_OF_BUTTONS]= {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+
+int flagForButtonPressed[NO_OF_BUTTONS] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+int flagForButtonPressed1s[NO_OF_BUTTONS]= {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+int counterForButtonPressed1s[NO_OF_BUTTONS]= {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
+
 
 GPIO_PinState isKeyInput(int index){
 	switch(index){
 	case 0:
-		return HAL_GPIO_ReadPin(GPIOA,BUTTON_1_Pin);
-	case 1:
-		return HAL_GPIO_ReadPin(GPIOA,BUTTON_2_Pin);
-	case 2:
-		return HAL_GPIO_ReadPin(GPIOA,BUTTON_3_Pin);
+		return HAL_GPIO_ReadPin(GPIOC,BUTTON_1_Pin);
 	default:
 		return NORMAL_STATE;
 	}
@@ -62,25 +60,4 @@ void getKeyInput(){
 			}
 		}
 	}
-}
-
-unsigned char is_button_pressed(unsigned char button_number){
-	if(button_number >= NO_OF_BUTTONS) return 0;
-	else {
-		if(flagForButtonPressed[button_number] == 1){
-			flagForButtonPressed[button_number] = 0;
-			return 1;
-		}
-		return 0;
-	}
-}
-unsigned char is_button_pressed_1s(unsigned char button_number){
-	if(button_number >= NO_OF_BUTTONS) return 0xff;
-	else {
-			if(flagForButtonPressed1s[button_number] == 1){
-				flagForButtonPressed1s[button_number] = 0;
-				return 1;
-			}
-			return 0;
-		}
 }

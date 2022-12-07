@@ -1,12 +1,17 @@
 #include "global.h"
 
-int status_1 = 0;
-int status_2 = 0;
-int status_3 = 0;
 
-int time_1 = 0;
-int time_2 = 0;
+//int status = 0;
+//
+int counter = 0;
 
-int red_time = 5;
-int green_time = 3;
-int yellow_time = 2;
+int time = 0;
+
+
+void add_counter(){
+	counter+=1;
+}
+
+void update_time(){
+	time+=10;
+}

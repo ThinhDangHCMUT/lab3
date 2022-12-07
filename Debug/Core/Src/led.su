@@ -1,0 +1,6 @@
+led.c:14:6:toggleRed	8	static
+led.c:17:6:toggleGreen	8	static
+led.c:20:6:toggleYellow	8	static
+led.c:24:6:clearLight	8	static
+led.c:30:6:displayNum	8	static
+led.c:135:6:clearLED	8	static

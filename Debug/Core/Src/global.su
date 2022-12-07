@@ -1,0 +1,2 @@
+global.c:11:6:add_counter	4	static
+global.c:15:6:update_time	4	static
